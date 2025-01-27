@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+
+    <!-- 1) Define a vehicle type (car) with some parameters -->
+    <vType id="car" accel="2.6" decel="4.5" sigma="0.5" length="5" maxSpeed="30" guiShape="passenger"/>
+
+    <!-- 2) Define routes using the edges from your net.xml -->
+    <route id="route_0" edges="A0A1 A1B1"/>
+    <route id="route_1" edges="A0B0 B0B1"/>
+
+    <!-- 3) Generate flows of vehicles on each route -->
+    <!-- Each flow runs from time=0 to 300 seconds, creating vehicles at 'vehsPerHour' rate -->
+    <flow id="flow_0" type="car" route="route_0" begin="0" end="300" vehsPerHour="300" departLane="best" departSpeed="max"/>
+    <flow id="flow_1" type="car" route="route_1" begin="0" end="300" vehsPerHour="300" departLane="best" departSpeed="max"/>
+    
+</routes>

@@ -1,0 +1,18 @@
+<configuration>
+    <input>
+        <!-- The network file you showed us -->
+        <net-file value="twoIntersection.net.xml"/>
+        <!-- The new routes file you just created -->
+        <route-files value="twoIntersection.rou.xml"/>
+    </input>
+
+    <time>
+        <begin value="0"/>
+        <end value="300"/>
+    </time>
+
+    <report>
+        <verbose value="true"/>
+        <no-step-log value="true"/>
+    </report>
+</configuration>
